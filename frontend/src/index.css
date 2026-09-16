@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --color-ivory: #FBF9F5;
+  --color-ivory-dim: #F3EEE4;
+  --color-ink: #2A2118;
+  --color-ink-soft: #6B5D4F;
+  --color-gold: #C99A1E;
+  --color-gold-deep: #9C7712;
+  --color-leaf: #3F6B4A;
+  --color-leaf-soft: #E6EFE7;
+  --color-brick: #A63D2F;
+  --color-brick-soft: #F6E7E3;
+  --color-plum: #4B3345;
+  --color-taupe: #E4DCC8;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ivory);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* subtle scrollbar for the dense dashboards */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-taupe); border-radius: 8px; }
